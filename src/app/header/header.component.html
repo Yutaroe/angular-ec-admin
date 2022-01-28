@@ -1,0 +1,25 @@
+<header class="header-wrapper">
+  <mat-toolbar>
+    <button mat-button routerLink="/list" matTooltip="商品一覧に戻ります">
+      My EC 管理画面
+    </button>
+    <span class="router">
+      <button mat-button [matMenuTriggerFor]="product" id="product">
+        商品管理
+      </button>
+      <mat-menu #product="matMenu">
+        <button mat-menu-item routerLink="/list">商品一覧</button>
+        <button mat-menu-item routerLink="/add">商品追加</button>
+      </mat-menu>
+      <button mat-button [matMenuTriggerFor]="toppings" id="toppings">
+        トッピング管理
+      </button>
+      <mat-menu #toppings="matMenu">
+        <button mat-menu-item routerLink="/toppinglist">トッピング一覧</button>
+        <button mat-menu-item routerLink="/addtopping">トッピング追加</button>
+      </mat-menu>
+      <button mat-button routerLink="/buyuser">購入者情報</button>
+      <button mat-button (click)="logout()" class="logout">ログアウト</button>
+    </span>
+  </mat-toolbar>
+</header>

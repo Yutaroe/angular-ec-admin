@@ -1,0 +1,20 @@
+.header-wrapper mat-toolbar {
+  z-index: 10;
+  top: 0;
+  left: 0;
+  margin: 0;
+  min-height: 50px;
+  max-height: 50px;
+  background-color: #1b435d;
+  color: #ffffff;
+  font-size: 1.7rem;
+}
+
+.router {
+  font-size: 1.2rem;
+  margin-left: 10px;
+}
+
+.router a {
+  margin-left: 10px;
+}

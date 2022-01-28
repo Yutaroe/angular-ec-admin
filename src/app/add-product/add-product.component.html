@@ -1,0 +1,63 @@
+<mat-card class="add-card">
+  <mat-card-header>
+    <mat-card-title class="add-title">商品を追加する</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form [formGroup]="newItem">
+      <div>
+        <mat-form-field class="add-field">
+          <input matInput placeholder="商品名" formControlName="coffee_name" />
+          <mat-error>商品名は必須です</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="add-field">
+          <textarea
+            matInput
+            placeholder="商品詳細"
+            formControlName="coffee_detail"
+            class="add-detail"
+          ></textarea>
+          <mat-error>商品詳細は必須です</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="add-field">
+          <input
+            matInput
+            placeholder="Mサイズの値段"
+            formControlName="coffee_priceM"
+          />
+          <mat-error>値段は必須です</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="add-field">
+          <input
+            matInput
+            placeholder="Lサイズの値段"
+            formControlName="coffee_priceL"
+          />
+          <mat-error>値段は必須です</mat-error>
+        </mat-form-field>
+      </div>
+      <div>画像を選択</div>
+      <input
+        type="file"
+        accept=".jpg, .png, .gif"
+        (change)="imageChange($event)"
+      />
+      <div class="image">
+        <img [src]="imgSrc" />
+      </div>
+      <button
+        mat-raised-button
+        [disabled]="newItem.invalid"
+        (click)="onClick()"
+        class="add-botton"
+      >
+        商品を追加する
+      </button>
+    </form>
+  </mat-card-content>
+</mat-card>

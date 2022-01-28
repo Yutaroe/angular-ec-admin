@@ -1,0 +1,60 @@
+<mat-card class="edit-card">
+  <mat-card-header>
+    <mat-card-title class="edit-title">商品を編集する</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div>
+      <mat-form-field class="edit-field">
+        <input
+          matInput
+          placeholder="商品名"
+          [(ngModel)]="item && item.coffee_name"
+        />
+        <mat-error>商品名は必須です</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="edit-field">
+        <textarea
+          matInput
+          placeholder="商品詳細"
+          [(ngModel)]="item && item.coffee_detail"
+          class="edit-detail"
+        ></textarea>
+        <mat-error>商品詳細は必須です</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="edit-field">
+        <input
+          matInput
+          placeholder="Mサイズの値段"
+          [(ngModel)]="item && item.coffee_priceM"
+        />
+        <mat-error>値段は必須です</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="edit-field">
+        <input
+          matInput
+          placeholder="Lサイズの値段"
+          [(ngModel)]="item && item.coffee_priceL"
+        />
+        <mat-error>値段は必須です</mat-error>
+      </mat-form-field>
+    </div>
+    <div>画像を選択</div>
+    <input
+      type="file"
+      accept=".jpg, .png, .gif"
+      (change)="imageChange($event)"
+    />
+    <div class="image">
+      <img [src]="imgSrc" />
+    </div>
+    <button mat-raised-button (click)="onClick()" class="edit-botton">
+      編集する
+    </button>
+  </mat-card-content>
+</mat-card>

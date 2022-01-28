@@ -1,0 +1,74 @@
+form {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+mat-form-field {
+  margin-left: 20px;
+}
+
+button {
+  margin-left: 20px;
+}
+
+input {
+  margin-left: 10px;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  background-color: #ffffff;
+  margin-top: 20px;
+}
+
+tr {
+  border-bottom: 1px solid;
+  border-color: #e0e0e0;
+}
+
+.tr {
+  color: #666666;
+  font-size: 11.5px;
+  height: 60px;
+}
+
+td {
+  vertical-align: middle;
+}
+
+.id {
+  width: 5%;
+}
+
+.coffee {
+  width: 5%;
+}
+
+.size {
+  width: 5%;
+}
+
+.number {
+  width: 5%;
+}
+
+.topping {
+  width: 10%;
+}
+
+.name {
+  width: 15%;
+}
+
+.address {
+  width: 25%;
+}
+
+.number {
+  width: 15%;
+}
+
+.status {
+  width: 15%;
+}

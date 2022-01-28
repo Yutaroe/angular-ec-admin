@@ -1,0 +1,33 @@
+
+.search{
+  text-align: center;
+}
+
+div{
+  margin-top: 20px
+}
+
+.button {
+  margin-left: 10px;
+}
+
+table {
+  width:60%;
+  margin: 0 auto
+}
+td,
+th {
+  vertical-align: middle;
+}
+
+.id {
+  width:15%;
+}
+
+.name{
+  width:30%
+}
+
+.delete{
+  width:15%
+}

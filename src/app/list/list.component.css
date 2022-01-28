@@ -1,0 +1,52 @@
+div {
+  margin-top: 20px;
+}
+
+.button {
+  margin-left: 10px;
+}
+
+.search {
+  margin-left: 20px;
+}
+table {
+  width: 100%;
+  text-align: center;
+}
+td,
+th {
+  vertical-align: middle;
+}
+
+.id {
+  max-width: 10px;
+  width: 5%;
+  text-align: left;
+}
+
+.name {
+  width: 15%;
+}
+
+.img {
+  width: 20%;
+}
+
+.image {
+  width: 70%;
+}
+
+.detail {
+  width: 40%;
+}
+
+.priceM {
+  width: 10%;
+}
+.priceL {
+  width: 10%;
+}
+
+.table-row :hover {
+  cursor: pointer;
+}

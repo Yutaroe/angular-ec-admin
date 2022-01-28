@@ -1,0 +1,32 @@
+img {
+  max-height: 300px;
+}
+
+.image {
+  text-align: center;
+}
+
+.edit-card {
+  width: 500px;
+
+  margin: 20px auto;
+}
+
+.edit-title {
+  font-weight: bold;
+  font-size: 22px;
+  color: #3f51b5;
+}
+
+.edit-field {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.edit-botton {
+  width: 100%;
+}
+
+.edit-detail {
+  height: 100px;
+}

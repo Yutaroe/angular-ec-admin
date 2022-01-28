@@ -1,0 +1,45 @@
+<form [formGroup]="searchStatus">
+  <mat-form-field>
+    <input matInput placeholder="ID" formControlName="id" />
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="名前" formControlName="name" />
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="お届け日時" formControlName="date" />
+  </mat-form-field>
+  <button mat-raised-button (click)="search()">検索</button>
+  <button mat-raised-button (click)="clear()">クリア</button>
+</form>
+<div>
+  <table>
+    <tr class="tr">
+      <td>ID</td>
+      <td>コーヒーID</td>
+      <td>サイズ</td>
+      <td>数量</td>
+      <td>トッピングID</td>
+      <td>名前</td>
+      <td>住所</td>
+      <td>お届け日時</td>
+    </tr>
+    <tr *ngFor="let item of searchedItem" class="columns">
+      <td class="id">{{ item.carts }}</td>
+      <td class="coffee">{{ item.coffee_id }}</td>
+      <td class="size">{{ item.item_size }}</td>
+      <td class="number">{{ item.item_number }}</td>
+      <td class="topping">
+        <div *ngFor="let item of item.toppings">{{ item }}</div>
+      </td>
+      <td class="name">{{ item.name }}</td>
+      <td class="address">
+        <div>{{ item.addressNumber }}</div>
+        <div>{{ item.address }}</div>
+      </td>
+      <td class="date">
+        <div>{{ item.day }}</div>
+        <div>{{ item.time }}</div>
+      </td>
+    </tr>
+  </table>
+</div>

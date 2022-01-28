@@ -1,0 +1,45 @@
+<mat-card class="login-card">
+  <mat-card-header>
+    <mat-card-title class="login-title">ログイン</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div><app-error-messageing></app-error-messageing></div>
+    <form [formGroup]="loginUser">
+      <div>
+        <mat-form-field class="login-field">
+          <input
+            matInput
+            placeholder="メールアドレス"
+            formControlName="email"
+            type="email"
+          />
+          <mat-error>メールアドレスは必須です</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="login-field">
+          <input
+            [type]="hide ? 'password' : 'text'"
+            matInput
+            placeholder="パスワード"
+            formControlName="password"
+          />
+          <mat-icon matSuffix (click)="showPass()">
+            {{ !hide ? "visibility" : "visibility_off" }}
+          </mat-icon>
+          <mat-error>パスワードは必須です</mat-error>
+        </mat-form-field>
+      </div>
+      <button
+        type="submit"
+        mat-raised-button
+        color="primary"
+        [disabled]="!loginUser.valid"
+        class="login-botton"
+        (click)="onSubmit()"
+      >
+        ログイン
+      </button>
+    </form>
+  </mat-card-content>
+</mat-card>
